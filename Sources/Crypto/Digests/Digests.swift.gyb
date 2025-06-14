@@ -48,7 +48,7 @@ ${protocol_prefix}
 public struct ${name}Digest: DigestPrivate {
     let bytes: (${(wordsCount-1)*"UInt64, "+"UInt64"})
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == ${byteCount} else {
             return nil
         }

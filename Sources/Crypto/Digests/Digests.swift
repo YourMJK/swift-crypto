@@ -24,7 +24,7 @@
 public struct SHA256Digest: DigestPrivate {
     let bytes: (UInt64, UInt64, UInt64, UInt64)
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == 32 else {
             return nil
         }
@@ -95,7 +95,7 @@ public struct SHA256Digest: DigestPrivate {
 public struct SHA384Digest: DigestPrivate {
     let bytes: (UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == 48 else {
             return nil
         }
@@ -168,7 +168,7 @@ public struct SHA384Digest: DigestPrivate {
 public struct SHA512Digest: DigestPrivate {
     let bytes: (UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64, UInt64)
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == 64 else {
             return nil
         }
@@ -244,7 +244,7 @@ extension Insecure {
 public struct SHA1Digest: DigestPrivate {
     let bytes: (UInt64, UInt64, UInt64)
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == 20 else {
             return nil
         }
@@ -315,7 +315,7 @@ extension Insecure {
 public struct MD5Digest: DigestPrivate {
     let bytes: (UInt64, UInt64)
     
-    init?(bufferPointer: UnsafeRawBufferPointer) {
+    public init?(bufferPointer: UnsafeRawBufferPointer) {
         guard bufferPointer.count == 16 else {
             return nil
         }
